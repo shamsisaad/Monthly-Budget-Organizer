@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Monthly Budget Organizer</title>
 </head>
 <body>
-    
+    <div class="maincontainer">
+        <div class="introduction">
+            <h1>MONLTHLY BUDGET ORGAIZER</h1>
+            <p>helps you to organize budget in a efficient way</p>
+            <h3>One popular rule of thumb for building a budget is the 50/30/20 budget rule. <br>
+                 The rule states that you should allocate 50 percent of your income toward needs,<br> 30 percent toward wants and 20 percent for savings</h3>
+        </div>
+
+        <div id="monthlyincome">
+            <h4>Monthly Income Input</h4>
+            <div class="incomedetails">
+            <p>Wages Income Rs.</p>
+            <p>Passive Income Rs.</p>
+            <p>Total Monthly income Rs.</p>           
+            </div>
+            <div class="incomeinput">
+                <p><input type="number" id="wages" min="0" max="8" size="16" >
+                <button onclick="add()">Add</button></p>
+                <p><input type="number" id="passsiveincome" min="0" max="8" size="16" >
+                <button onclick="add()">Add</button></p>
+                <p><input type="number" id="totalincome" min="0" max="8" size="16" >
+                <button onclick="add()">Total</button></p>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
 </body>
 </html>
