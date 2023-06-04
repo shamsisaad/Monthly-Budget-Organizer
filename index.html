@@ -11,36 +11,305 @@
 <body>
     <div class="maincontainer">
         <div class="introduction">
-            <h1>MONLTHLY BUDGET ORGAIZER</h1>
+            <h1>MONLTHLY BUDGET ORGANIZER</h1>
             <p>helps you to organize budget in a efficient way</p>
-            <h3>One popular rule of thumb for building a budget is the 50/30/20 budget rule. <br>
-                 The rule states that you should allocate 50 percent of your income toward needs,<br> 30 percent toward wants and 20 percent for savings</h3>
+            <img src="./image/MONTH.png" alt="log" class="pic">
+            <h3 class="intro">One popular rule of thumb for building a budget is the 50/30/20 budget rule. <br>
+                 The rule states that you should allocate 50 percent of your income toward needs,<br> 30 percent toward wants and 20 percent for savings</h3> 
         </div>
-
-        <div id="monthlyincome">
-            <h4>Monthly Income Input</h4>
-            <div class="incomedetails">
-            <p>Wages Income Rs.</p>
-            <p>Passive Income Rs.</p>
-            <p>Total Monthly income Rs.</p>           
-            </div>
-            <div class="incomeinput">
-                <p><input type="number" id="wages" min="0"  size="10" >
-                <button onclick="add()">Add</button></p>
-                <p><input type="number" id="passsiveincome" min="0" max="8" size="16" >
-                <button onclick="add()">Add</button></p>
-                <p><input type="number" id="totalincome" min="0" max="8" size="16" >
-                <button onclick="add()">Total</button></p>
-
-
-            </div>
-
+           <br> <br>
+        <!-- set total budget avaliable -->
+        <div class="monthlyincome">
+            <table id="monthlyincome">
+                <tr>
+                    <th>Budget</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Wages </td>
+                    <td><input type="number" id="wages"></td>
+                </tr>
+                <tr>
+                    <td>Passive Income</td>
+                    <td><input type="number" id="passiveincome"></td>                    
+                </tr>
+                <tr>
+                    <td>Avaliable Budget</td>
+                    <td><span id="avaliablebudget"></span></td>
+                    <td><button id="budget" onclick="budget()">Get Budget</button></td>
+                </tr>
+            </table>
         </div>
+       <br> <br>
 
+        <!-- set Monthly Expenses -->
+        <div id="monthlyexpenses">
+        <!-- set Home Expenses -->
+        <div id="homeexpenses">
+            <table class="homeexpenses">
+                <tr>
+                    <th>Date</th>
+                    <th>Home Expenses</th>
+                    <th>Amouont</th>
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Mortgage/Rent</td>
+                    <td><input type="number" id="rent"></td>                   
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Electricity</td>
+                    <td><input type="number" id="electricity"></td>                   
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Gas</td>
+                    <td><input type="number" id="gas"></td>
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Water/Sewer</td>
+                    <td><input type="number" id="water"></td>                    
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Phone</td>
+                    <td><input type="number" id="phone"></td>                   
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Cable/Satellite</td>
+                    <td><input type="number" id="cable"></td>                  
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Internet</td>
+                    <td><input type="number" id="internet"></td>                    
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                    <td>Maintenance</td>
+                    <td><input type="number" id="maintenance"></td>                    
+                </tr>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td><span id="totalhomeexp"></span></td>
+                    <td><button id="totalhomexpenses" onclick="homeexp()">Get Home Expense</button></td>
+                </tr>
+            </table>
+        </div>
+        <br> <br>
 
+<!-- Set Health Expenses -->
+            <div id="health">
+                <table class="health">
+                    <tr>
+                        <th>Date</th>
+                        <th>Health</th>
+                        <th>Amouont</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Doctor/Dentist</td>
+                        <td><input type="number" id="doctor"></td>                       
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Medicine/Drugs</td>
+                        <td><input type="number" id="medicine"></td>                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td><span id="totalhealthexp"></span></td>
+                        <td><button id="totalhealthxpenses" onclick="healthexp()">Get Health Expenses</button></td>
+                    </tr>
+                </table>
+            </div>
+            <br> <br>
 
+<!-- Set Transportation Expenses -->
+                <div id="transportation">
+                    <table class="transportation">
+                        <tr>
+                            <th>Date</th>
+                            <th>Transportation</th>
+                            <th>Amouont</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date"></td>
+                            <td>Vehicle Repairs</td>
+                            <td><input type="number" id="repairs"></td>                            
+                        </tr>
+                        <tr>
+                            <td><input type="date"></td>
+                            <td>Bus/Taxi Fare</td>
+                            <td><input type="number" id="fare"></td>                            
+                        </tr>
+                        <tr>
+                            <td><input type="date"></td>
+                            <td>Fuel</td>
+                            <td><input type="number" id="fuel"></td>                            
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td><span id="totaltransexpenses"></span></td>
+                            <td><button id="totaltransportexp" onclick="transexp()">Get Transportation Expenses</button></td>
+                        </tr>
+                    </table>
+                </div>    
+                <br> <br>
 
+<!-- Set Daily Living Expenses -->
+            <div id="dailyliving">
+                <table class="dailyliving">
+                    <tr>
+                        <th>Date</th>
+                        <th>Daily Living</th>
+                        <th>Amouont</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Groceries</td>
+                        <td><input type="number" id="groceries"></td>                        
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Education</td>
+                        <td><input type="number" id="education"></td>                        
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Dining Out</td>
+                        <td><input type="number" id="dinningout"></td>                     
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Salon</td>
+                        <td><input type="number" id="salon"></td>                       
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td><span id="totaldailylivingexpenses"></span></td>
+                        <td><button id="totaldailyexp" onclick="dailyexp()">Get Daily Living Expenses</button></td>
+                    </tr>
+                </table>
+            </div>   
+<br> <br>
 
+<!-- Set Charity / Donation Expenses -->
+            <div id="charity">
+                <table class="charity">
+                    <tr>
+                        <th>Date</th>
+                        <th>Charity/Gifts</th>
+                        <th>Amouont</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Gifts Given</td>
+                        <td><input type="number" id="gifts"></td>                            
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Donations</td>
+                        <td><input type="number" id="donation"></td>                            
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td><span id="totalcharityexpenses"></span></td>
+                        <td><button id="charityexpenses" onclick="charityexp()">Get Charity Expenses</button></td>
+                    </tr>
+                </table>
+            </div>  
+<br> <br>
+
+<!-- Set Subscription Expenses  -->
+            <div id="subscriptions">
+                <table class="subscriptions">
+                    <tr>
+                        <th>Date</th>
+                        <th>Subscriptioins</th>
+                        <th>Amouont</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Newspaper</td>
+                        <td><input type="number" id="newspaper"></td>                        
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Magazines</td>
+                        <td><input type="number" id="magazines"></td>                               
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td><span id="totalsubscriptionexpenses"></span></td>
+                        <td><button id="subscriptionexpenses" onclick="subexp()">Get Subscription Expenses</button></td>
+                    </tr>
+                </table>    
+            </div>
+<br> <br>
+
+            <!-- Set Miscellaneous Expenses -->
+            <div id="miscellaneous">
+                <table class="miscellaneous">
+                    <tr>
+                        <th>Date</th>
+                        <th>Miscellaneous</th>
+                        <th>Amouont</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Bank Fee</td>
+                        <td><input type="number" id="bankfee"></td>                       
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Credit Cards</td>
+                        <td><input type="number" id="creditcard"></td>                        
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Sports</td>
+                        <td><input type="number" id="sports"></td>                       
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Toys/Gadgets</td>
+                        <td><input type="number" id="toys"></td>                     
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                        <td>Vocational/Travel</td>
+                        <td><input type="number" id="travel"></td>                   
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td><span id="totalmiscellaneousexpenses"></span></td>
+                        <td><button id="miscellaneousexpenses" onclick="miscexp()">Get Miscellaneous Expenses</button></td>
+                    </tr>
+                    <!-- <br> <br> <br> -->
+                     <!-- Set Total Monthly Expenses -->
+                    <tr>
+                        <td colspan="2">Total Monthly Expenses:</td>
+                        <td ><span id="te"></span></td>
+                        <td><button id="tmexp" onclick="tmeexp()">Get Monthly Expenses</button></td>
+                    </tr>
+                     <br> <br> <br>
+                </table>    
+            </div>
     </div>
+<br>
+<hr>
+<br>
+    <div id="savings">
+      <P>Total Budget : <span id="totalbudget"></span></P>         
+      <br>
+      <P>Total Expenses<span id="totalexpenditure"></span></P>
+      <br>
+      <P>Total Saving : <span id="totalsavings"></span></P>
+      <P><button id="save" onclick="saving()">Get Total Saving</button></P>
+    </div>    
 </body>
 </html>

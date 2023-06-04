@@ -1,9 +1,85 @@
-.incomedetails {
-    display: inline-block
+body {
+    background-color: #ebe8cf;
+
 }
 
-.incomeinput {
-    display: inline-block
+img.pic {
+    width: 40%;
+    height: 45%;
+    margin-left: 350px;   
+    }     
+
+
+h1 {
+    background-color: burlywood;
+    color:darkolivegreen;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+p {
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.monthlyincome {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#homeexpenses {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#health {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+ 
+#transportation {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}  
+
+#dailyliving {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#charity {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#subscriptions {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#miscellaneous {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#savings {
+    background-color: #bcbcec;
+   }
 
